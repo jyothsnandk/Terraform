@@ -1,0 +1,18 @@
+# Example backend configuration for S3 state management
+# Copy this file to backend.tf and update with your values
+
+terraform {
+  backend "s3" {
+    bucket         = "your-terraform-state-bucket"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-state-lock"
+  }
+}
+
+# Note: Before using this backend, you need to:
+# 1. Create an S3 bucket for storing state
+# 2. Create a DynamoDB table for state locking
+# 3. Update the bucket name, key, region, and table name above
+# 4. Ensure your AWS credentials have permissions to access these resources
