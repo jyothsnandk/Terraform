@@ -1,0 +1,21 @@
+aws_region = "us-east-1"
+project_name = "flask-express"
+
+# Optional: Customize VPC configuration
+# vpc_cidr = "10.0.0.0/16"
+# availability_zones = ["us-east-1a", "us-east-1b"]
+# public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+# private_subnet_cidrs = ["10.0.10.0/24", "10.0.20.0/24"]
+
+# Optional: Customize ports
+# flask_port = 5000
+# express_port = 3000
+
+# Optional: Customize ECS task resources
+# flask_cpu = 256
+# flask_memory = 512
+# express_cpu = 256
+# express_memory = 512
+
+# Optional: Desired task count
+# desired_count = 1
