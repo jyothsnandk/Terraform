@@ -1,0 +1,10 @@
+aws_region   = "us-east-1"
+instance_type = "t2.micro"
+key_name     = "your-key-pair-name"
+
+# Optional: Customize ports
+# flask_port   = 5000
+# express_port = 3000
+
+# Optional: Restrict access
+# allowed_cidr = "0.0.0.0/0"
