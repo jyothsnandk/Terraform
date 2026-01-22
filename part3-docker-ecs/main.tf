@@ -424,7 +424,7 @@ resource "aws_lb_listener_rule" "flask" {
 
   condition {
     path_pattern {
-      values = ["/backend/*"]
+      values = ["/api/*"]
     }
   }
 }
@@ -502,7 +502,7 @@ resource "aws_ecs_task_definition" "express" {
       },
       {
         name  = "FLASK_BACKEND_URL"
-        value = "http://${aws_lb.main.dns_name}/backend"
+        value = "http://${aws_lb.main.dns_name}/api"
       }
     ]
 
@@ -582,3 +582,4 @@ resource "aws_ecs_service" "express" {
 
   tags = var.tags
 }
+
