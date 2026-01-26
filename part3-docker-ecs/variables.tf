@@ -85,3 +85,8 @@ variable "tags" {
     Part        = "Part3-Docker-ECS"
   }
 }
+variable "key_name" {
+  description = "tutedude-new"
+  type        = string
+}
+
